@@ -12,7 +12,10 @@
 
 ## 使用方法
 * 下载代码，保存到指定的路径，例如:
-  /root/sh/
-
-* 使用 root 权限，添加 crontab 任务计划，例如:
-  */5 * * * * /root/sh/defend_ssh.py >> /root/sh/cron.log 2>&1
+```bash
+/root/sh/
+```
+* 使用 root 权限，添加 crontab 任务计划，例如　**每５分钟运行一次程序**　:
+```bash
+*/5 * * * * /root/sh/defend_ssh.py >> /root/sh/cron.log 2>&1
+```
