@@ -15,7 +15,13 @@
 ```bash
 /root/sh/
 ```
-* 使用 root 权限，添加 crontab 任务计划，例如　**每５分钟运行一次程序**　:
+* 使用 root 权限, 赋予程序可执行权限:
 ```bash
+chmod 700 /root/sh/defend_ssh.py
+```
+* 使用 root 权限，添加 crontab 任务计划，例如　**每５分钟运行一次程序** :
+```bash
+crontab -e
+# 添加以下计划
 */5 * * * * /root/sh/defend_ssh.py >> /root/sh/cron.log 2>&1
 ```
