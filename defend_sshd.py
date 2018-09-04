@@ -35,7 +35,7 @@ class DefendSSH():
             string = F.read()
             F.close()
 
-        result = re.findall(r'%s %s .*: (.* \d+\.\d+\.\d+\.\d+)' % (month, day), string)
+        result = re.findall(r'%s[ ]{1,2}%s .*: (.* \d+\.\d+\.\d+\.\d+)' % (month, day), string)
 
         return result
 
